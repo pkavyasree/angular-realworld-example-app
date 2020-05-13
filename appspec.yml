@@ -5,7 +5,7 @@ files:
     destination: /var/www/html/
 hooks:
   ApplicationStop:
-    - location: scripts/stop_apache.sh
+    - location: scripts/stop_httpd.sh
       timeout: 300
       runas: root
   BeforeInstall:
@@ -13,6 +13,6 @@ hooks:
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_apache.sh
+    - location: scripts/start_httpd.sh
       timeout: 300
       runas: root
